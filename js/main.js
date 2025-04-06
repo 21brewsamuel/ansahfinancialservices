@@ -37,9 +37,7 @@ function showPage(pageId) {
 function scrollToSection(sectionId) {
   const section = document.getElementById(sectionId);
   if (section) {
-    const offsetTop = section.offsetTop - 100;
-    window.scrollTo({
-      top: offsetTop,
+    section.scrollIntoView({
       behavior: 'smooth'
     });
   }
@@ -175,4 +173,35 @@ document.addEventListener('DOMContentLoaded', () => {
       }, 500);
     }
   }
+
+  // Handle navigation links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      // If it's a section link (not just "#")
+      if(this.getAttribute('href') !== "#") {
+        e.preventDefault();
+        
+        // If it has data-page attribute, handle page navigation
+        const dataPage = this.getAttribute('data-page');
+        if(dataPage) {
+          // If it's a page navigation link
+          const pages = document.querySelectorAll('.page');
+          pages.forEach(page => {
+            page.classList.remove('active');
+          });
+          document.getElementById(dataPage).classList.add('active');
+          window.scrollTo(0, 0);
+        } else {
+          // If it's just a section link, scroll to that section
+          const targetId = this.getAttribute('href').substring(1);
+          const targetElement = document.getElementById(targetId);
+          if(targetElement) {
+            targetElement.scrollIntoView({
+              behavior: 'smooth'
+            });
+          }
+        }
+      }
+    });
+  });
 }); 
