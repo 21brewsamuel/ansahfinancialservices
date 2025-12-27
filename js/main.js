@@ -163,6 +163,22 @@ if (contactForm) {
 
 // Initialize the page based on URL hash if present
 document.addEventListener('DOMContentLoaded', () => {
+  // FAQ Accordion
+  const faqItems = document.querySelectorAll('.faq-item');
+  faqItems.forEach(item => {
+    const question = item.querySelector('.faq-question');
+    question.addEventListener('click', () => {
+      // Close other items
+      faqItems.forEach(otherItem => {
+        if (otherItem !== item) {
+          otherItem.classList.remove('active');
+        }
+      });
+      // Toggle current item
+      item.classList.toggle('active');
+    });
+  });
+
   // Check if URL has a hash and navigate to that section
   if (window.location.hash) {
     const sectionId = window.location.hash.substring(1);
