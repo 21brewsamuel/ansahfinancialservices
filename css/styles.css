@@ -1633,3 +1633,264 @@ footer {
     padding: 0 16px 16px;
   }
 }
+
+
+/* Prior Year Filings Section */
+.prior-year {
+  padding: 100px 0;
+  background-color: var(--bg-color);
+}
+
+/* Bookkeeping Pricing Section */
+.bookkeeping-pricing {
+  padding: 100px 0;
+  background-color: var(--bg-light);
+}
+
+.bookkeeping-intro {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 40px;
+  color: var(--text-light);
+  font-size: 1.05rem;
+}
+
+.bookkeeping-packages {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.bookkeeping-card {
+  background-color: white;
+  border-radius: var(--border-radius);
+  padding: 30px;
+  box-shadow: var(--box-shadow);
+  border: 2px solid var(--border-color);
+  position: relative;
+  transition: var(--transition);
+}
+
+.bookkeeping-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.bookkeeping-card.featured {
+  border-color: var(--primary-color);
+}
+
+.bookkeeping-badge {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.bookkeeping-header {
+  text-align: center;
+  margin-bottom: 24px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid var(--border-color);
+}
+
+.bookkeeping-header h3 {
+  margin-bottom: 12px;
+  font-size: 1.4rem;
+}
+
+.bookkeeping-price {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.bookkeeping-price span {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--text-light);
+}
+
+.bookkeeping-body {
+  text-align: left;
+}
+
+.best-for {
+  background-color: var(--primary-light);
+  padding: 12px;
+  border-radius: var(--border-radius);
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+}
+
+.bookkeeping-body h4 {
+  font-size: 1rem;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: var(--secondary-color);
+}
+
+.bookkeeping-body ul {
+  padding-left: 20px;
+  margin-bottom: 16px;
+}
+
+.bookkeeping-body li {
+  list-style: disc;
+  color: var(--text-light);
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+}
+
+.package-benefit {
+  margin-top: 20px;
+  padding: 12px;
+  background-color: var(--bg-light);
+  border-radius: var(--border-radius);
+  font-weight: 500;
+  text-align: center;
+}
+
+.pricing-disclosure {
+  background-color: #fff3cd;
+  border: 1px solid #ffc107;
+  border-radius: var(--border-radius);
+  padding: 20px;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.pricing-disclosure p {
+  margin: 0;
+  color: var(--text-color);
+}
+
+/* Referral Section */
+.referral {
+  padding: 100px 0;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+  color: white;
+}
+
+.referral-content {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.referral-header h2 {
+  color: white;
+  margin-bottom: 10px;
+  font-size: 2.5rem;
+}
+
+.referral-tagline {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.referral-description {
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+  opacity: 0.95;
+}
+
+.referral-steps {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 50px;
+  flex-wrap: wrap;
+}
+
+.referral-step {
+  flex: 1;
+  min-width: 200px;
+  max-width: 250px;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 24px;
+  border-radius: var(--border-radius);
+  backdrop-filter: blur(10px);
+}
+
+.referral-step-number {
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  color: var(--primary-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 auto 16px;
+}
+
+.referral-step p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.referral-details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.referral-detail-box {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 24px;
+  border-radius: var(--border-radius);
+  text-align: left;
+  backdrop-filter: blur(10px);
+}
+
+.referral-detail-box h3 {
+  color: white;
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+}
+
+.referral-detail-box p {
+  font-size: 0.95rem;
+  margin-bottom: 12px;
+}
+
+.referral-detail-box ul {
+  padding-left: 20px;
+}
+
+.referral-detail-box li {
+  list-style: disc;
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+}
+
+.referral-cta {
+  margin-top: 40px;
+}
+
+.referral-cta h3 {
+  color: white;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+/* Responsive for new sections */
+@media (max-width: 768px) {
+  .bookkeeping-packages {
+    grid-template-columns: 1fr;
+  }
+  
+  .referral-steps {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .referral-details {
+    grid-template-columns: 1fr;
+  }
+}
